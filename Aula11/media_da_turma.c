@@ -11,18 +11,20 @@ int main(void)
 
     for (int i = 0; i < NRO_ALUNOS; i++)
     {
-        printf("Insira a nota do aluno %d", i + 1);
+        printf("Insira a nota do aluno %d: ", i + 1);
         scanf("%f", &notas[i]);
         soma += notas[i];
     }
 
     media = soma / NRO_ALUNOS;
 
+    printf("Media da turma: %.2f\n", media);
+
     for (int i = 0; i < NRO_ALUNOS; i++)
     {
         if (notas[i] > media)
         {
-            printf("Aluno %d ficou acima da media da turma!", i + 1);
+            printf("Aluno %d ficou acima da media da turma!\n", i + 1);
         }
     }
 
